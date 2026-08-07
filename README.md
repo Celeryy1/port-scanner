@@ -11,6 +11,13 @@ Open ports:
 22  
 80
 
+## TODO
+
+- [ ] Add input validation
+- [ ] Add custom port ranges
+- [ ] Improve error handling
+- [ ] Add multithreading
+
 ## Disclaimer
 This tool is intended for educational purposes.
 Only scan systems you own or have permission to test.
