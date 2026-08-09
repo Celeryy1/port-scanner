@@ -14,7 +14,7 @@ Open ports:
 ## TODO
 
 - [ ] Add input validation
-- [ ] Add custom port ranges
+- [x] Add custom port ranges
 - [ ] Improve error handling
 - [ ] Add multithreading
 
