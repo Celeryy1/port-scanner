@@ -17,9 +17,9 @@ Target: 192.168.1.1
 Starting port: 20
 Ending port: 100
 
-Open ports:
-22
-80
+Open ports:  
+22  
+80  
 
 ## TODO
 
