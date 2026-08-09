@@ -1,14 +1,24 @@
 # Port Scanner
+
 A simple TCP port scanner written in Python.
 
 ## Usage
+
 python portscan.py
 
-## Example
-Target: 192.168.1.1
+When prompted, enter:
+- Target IP address or hostname
+- Starting port
+- Ending port
 
-Open ports:  
-22  
+## Example
+
+Target: 192.168.1.1
+Starting port: 20
+Ending port: 100
+
+Open ports:
+22
 80
 
 ## TODO
@@ -19,5 +29,6 @@ Open ports:
 - [ ] Add multithreading
 
 ## Disclaimer
+
 This tool is intended for educational purposes.
 Only scan systems you own or have permission to test.
