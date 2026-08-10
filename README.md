@@ -13,9 +13,9 @@ When prompted, enter:
 
 ## Example
 
-Target: 192.168.1.1
-Starting port: 20
-Ending port: 100
+Target: 192.168.1.1  
+Starting port: 20  
+Ending port: 100  
 
 Open ports:  
 22  
