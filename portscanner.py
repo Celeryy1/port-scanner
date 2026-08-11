@@ -1,40 +1,51 @@
 import socket
 import sys
+from datetime import datetime
 
 open_ports = []
 target = input("Enter target IP or host: ")
-start_port = int(input("Enter starting port: "))
-end_port = int(input("Enter ending port: "))
-    
-print(f"\nScanning {target} from port {start_port} to {end_port}...")
 
-def port_scan(target, start_port, end_port):
+def validate_target(target):
     try:
-        target = socket.gethostbyname(target)
-              
-    except socket.gaierror:
-        print("\n Hostname could not be resolved")
-        sys.exit()
+         target = socket.gethostbyname(target)
+         return target
     
-    except KeyboardInterrupt:
-        print("\n Scan halted by user")
-        sys.exit()
-                    
-    except socket.error:
-        print("\ Server not responding")
+    except socket.gaierror:
+        print("\nHostname could not be resolved")
         sys.exit()
 
-    for p in range(start_port, end_port + 1):
+    except KeyboardInterrupt:
+        print("\nScan halted by user")
+        sys.exit()
+
+    except socket.error:
+        print("\nServer not responding")
+        sys.exit()
+
+def port_scan(target):
+
+    print("-" * 50)
+    print("Scanning Target: " + target)
+    print("Scanning started at:" + str(datetime.now()))
+    print("-" * 50)
+
+    for p in range(1, 65536):
 
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.settimeout(0.5)
             result = s.connect_ex((target, p))
+
             if result == 0:
                 open_ports.append(p)
 
     print("Open ports:")
     for p in open_ports:
         print(p)
+
+    print("Scan complete")
+
+validated_target = validate_target(target)
+port_scan(validated_target)
 
     print("Scan complete")
 
