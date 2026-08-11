@@ -46,7 +46,3 @@ def port_scan(target):
 
 validated_target = validate_target(target)
 port_scan(validated_target)
-
-    print("Scan complete")
-
-port_scan(target, start_port, end_port)
