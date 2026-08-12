@@ -25,7 +25,7 @@ def validate_target(target):
 def port_scan(target):
 
     print("-" * 50)
-    print("Scanning Target: " + target)
+    print("Scanning target: " + target)
     print("Scanning started at:" + str(datetime.now()))
     print("-" * 50)
 
