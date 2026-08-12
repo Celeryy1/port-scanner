@@ -18,7 +18,7 @@ When prompted, enter:
 Enter target IP or host: 192.168.1.1
 
 --------------------------------------------------
-Scanning Target: 192.168.1.1
+Scanning target: 192.168.1.1
 Scanning started at:2026-08-11 13:45:00.123456
 --------------------------------------------------
 Open ports:  
