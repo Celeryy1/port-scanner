@@ -3,12 +3,12 @@ import sys
 from datetime import datetime
 
 open_ports = []
-target = input("Enter target IP or host: ")
+t = input("Enter target IP or host: ")
 
-def validate_target(target):
+def validate_target(t):
     try:
-         target = socket.gethostbyname(target)
-         return target
+         t = socket.gethostbyname(t)
+         return t
     
     except socket.gaierror:
         print("\nHostname could not be resolved")
@@ -22,10 +22,10 @@ def validate_target(target):
         print("\nServer not responding")
         sys.exit()
 
-def port_scan(target):
+def port_scan(t):
 
     print("-" * 50)
-    print("Scanning target: " + target)
+    print("Scanning target: " + t)
     print("Scanning started at:" + str(datetime.now()))
     print("-" * 50)
 
@@ -33,7 +33,7 @@ def port_scan(target):
 
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.settimeout(0.5)
-            result = s.connect_ex((target, p))
+            result = s.connect_ex((t, p))
 
             if result == 0:
                 open_ports.append(p)
